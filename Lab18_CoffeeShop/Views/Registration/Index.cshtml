@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+}
+
+
+
+@model Lab18_CoffeeShop.Models.RegisterUser
+
+@using (var form = Html.BeginForm())
+{
+
+    <div class="ouch">
+        <h1 class="display-4">Registration</h1>
+        <div>
+            @Html.LabelFor(coffee => coffee.UserName)
+            @Html.TextBoxFor(coffee => coffee.UserName)
+        </div>
+        <div>
+            @Html.LabelFor(coffee => coffee.Email)
+            @Html.TextBoxFor(coffee => coffee.Email)
+        </div>
+        <div>
+            @Html.LabelFor(coffee => coffee.Password)
+            @Html.TextBoxFor(coffee => coffee.Password)
+        </div>
+
+        <input type="submit" value="Submit" />
+    </div>
+
+    
+    @Html.CheckBox("check", false);
+        
+    
+
+
+
+            
+}
+
+<style>
+    .ouch{
+        width: 70px;
+        height: 300px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-content: center;
+        align-content: center;
+    }
+
+</style>
+
+
+
